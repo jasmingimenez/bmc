@@ -805,6 +805,13 @@ ul.flippy li:first-of-type {
 ul.flippy li:nth-of-type(2) {
 	float: right;
 }
+.group-right ul {
+	padding-left: 0;
+}
+.group-right ul li {
+	list-style-type: none;
+	margin: 10px 0;
+}
 @media (min-width: 992px) {
 	.ds-2col-stacked > .group-left {
 		width: 66%;
