@@ -31,6 +31,23 @@
 		}
 		//end accordion
 
+		/*
+		*
+		* Donation Thermometer */
+		    // Get total and percent
+		    var total = $(".views-field-value:last").text().trim();
+		    var percent = $(".views-field-expression-1:last").text().trim();
+		    total = "$" + total.replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,");
+
+		    // Update total and percent
+		    $(".donation-current p").text(total);
+		    $(".view-header p").last().text("We have completed " + percent + " of our goal to enable us to flood the earth with the Book of Mormon through 2021.")
+		 
+		    // Update progress bar
+		    $(".pgbar-complete").animate({width: percent}, 1000)
+		    //end Donation Thermometer
+
+
 		//Masonry js
 			var $grid = $('.grid').masonry({
 			  // options
